@@ -1,0 +1,12 @@
+:root{
+  --surface-1: 14 15 18;
+  --surface-2: 20 21 27;
+  --outline:   42 44 53;
+  --brand-400: 0 200 255;
+  --brand-500: 0 180 255;
+  --text-1: 235 239 245;
+  --text-2: 160 168 180;
+  --glow-opacity: 0.25;
+  --shadow-glow: 0 0 24px rgba(var(--brand-500), var(--glow-opacity));
+}
+body { background: rgb(var(--surface-1)); color: rgb(var(--text-1)); }
