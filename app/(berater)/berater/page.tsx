@@ -1,8 +1,9 @@
-export default function BeraterPage() {
+import AvatarSection from "@/components/berater/AvatarSection";
+
+export default function KIBeraterPage() {
   return (
-    <section className="panel">
-      <h1 className="title">Beraterbereich</h1>
-      <p className="muted mt-2">Top-Berater, KI-Berater (12 Sprachen), Terminbuchung.</p>
-    </section>
+    <main>
+      <AvatarSection />
+    </main>
   );
 }

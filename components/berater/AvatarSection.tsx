@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AvatarSection() {
   return (
     <section className="relative flex flex-col items-center justify-center bg-oqd-dark py-20 overflow-hidden">
-      {/* arka plan glow */}
+      {/* glow arka plan */}
       <div className="absolute inset-0 bg-gradient-to-br from-oqd-purple/20 via-oqd-dark to-oqd-pink/10 blur-3xl" />
 
       {/* avatar */}
@@ -21,7 +21,7 @@ export default function AvatarSection() {
         Deine persönliche KI-Beraterin
       </h2>
 
-      {/* kısa açıklama */}
+      {/* açıklama */}
       <p className="relative z-10 mt-2 text-center text-white/75 max-w-xl">
         Maßgeschneiderte Angebote – ehrlich, transparent, ohne Quatsch.
       </p>

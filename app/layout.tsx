@@ -1,16 +1,16 @@
 import "./globals.css";
 import "../styles/design-tokens.css";
-import { Header } from "@/components/ui/Header";
+import type { Metadata } from "next";
 
-export const metadata = { title: "OhneQuatschDeals", description: "Einheitliches, sauberes UI – OQD" };
+export const metadata: Metadata = {
+  title: "OhneQuatschDeals",
+  description: "Ehrliche Beratung – Internet, Mobilfunk, Strom, Gas & Kredite.",
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body>
-        <Header />
-        <main className="container-page py-8">{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

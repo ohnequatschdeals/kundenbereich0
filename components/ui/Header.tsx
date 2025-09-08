@@ -1,22 +1,33 @@
+"use client";
 import Link from "next/link";
-import { Logo } from "./Logo";
 
-export function Header() {
+export default function Header() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur bg-background/70 border-b border-outline/20">
-      <div className="container-page flex h-14 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Logo className="h-6 glow" />
-          <span className="font-semibold tracking-tight">ohnequatschdeals</span>
-        </div>
-        <nav className="flex items-center gap-4 text-sm">
-          <Link href="/">Home</Link>
-          <Link href="/login">Login</Link>
-          <Link href="/registrieren">Registrieren</Link>
-          <Link href="/kunden/dashboard">Kunden</Link>
-          <Link href="/admin">Admin</Link>
-          <Link href="/berater">Berater</Link>
+    <header className="sticky top-0 z-50 border-b border-outline/20 bg-background/75 backdrop-blur">
+      <div className="container-page flex h-16 items-center justify-between gap-4">
+        <Link href="/" className="flex items-center gap-2">
+          <span className="text-gradient font-extrabold tracking-tight text-xl sm:text-2xl">
+            OhneQuatschDeals
+          </span>
+          <span className="text-brandMuted font-semibold text-sm">.de</span>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <Link href="/" className="hover:text-brand">Home</Link>
+          <Link href="/angebote" className="hover:text-brand">Angebote</Link>
+          <Link href="/berater" className="hover:text-brand">Berater</Link>
+          <Link href="/warum-wir" className="hover:text-brand">Warum wir?</Link>
+          <Link href="/login" className="hover:text-brand">Login</Link>
         </nav>
+
+        <div className="flex items-center gap-3">
+          <Link href="/kontakt" className="btn-pill btn-outline hidden sm:inline-block">
+            Kontakt
+          </Link>
+          <Link href="/berater" className="btn-pill btn-gradient glow">
+            Jetzt beraten lassen
+          </Link>
+        </div>
       </div>
     </header>
   );

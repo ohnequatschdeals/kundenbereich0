@@ -2,24 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base { body { @apply bg-background text-text antialiased; } }
-
-@layer components {
-  .container-page { @apply max-w-7xl mx-auto px-4 md:px-6; }
-  .panel { @apply bg-surface/80 border border-outline/30 rounded-xl2 p-4 md:p-6; }
-  .title { @apply text-2xl md:text-3xl font-semibold tracking-tight; }
-  .muted { @apply text-textDim; }
-  .glow { box-shadow: var(--shadow-glow); }
+/* Base: body'ye doğrudan renkleri veriyoruz, @apply ile olmayan util'lere referans yok */
+@layer base {
+  html, body { height: 100%; }
+  body {
+    background: #0e0f1a;           /* background */
+    color: rgb(235 239 245);       /* textColor */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
-@layer utilities {
-  .text-gradient {
-    background: linear-gradient(90deg, #ff3d8d, #7e3fff, #00b4ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+/* Components */
+@layer components {
+  .container-page { @apply max-w-7xl mx-auto px-4 md:px-6; }
+  .panel { @apply bg-black/20 border border-white/10 rounded-xl2 p-4 md:p-6; }
+  .title { @apply text-2xl md:text-3xl font-semibold tracking-tight; }
+  .muted { color: rgb(160 168 180); } /* textDim */
+  .btn-pill { @apply rounded-full px-6 py-3 font-medium transition-all; }
+  .btn-gradient {
+    background: linear-gradient(90deg,#ff3d8d,#7e3fff,#00b4ff);
+    color: white;
+    box-shadow: 0 0 20px rgba(126,63,255,.35);
   }
-  .btn-pill { @apply rounded-full px-6 py-3 font-medium border border-outline/30 transition-all; }
-  .btn-gradient { background: linear-gradient(90deg, #ff3d8d, #7e3fff, #00b4ff); color: white; box-shadow: 0 0 20px rgba(126,63,255,0.35); }
-  .btn-outline { background: transparent; color: rgb(var(--text-1)); box-shadow: 0 0 20px rgba(0,180,255,0.35) inset, 0 0 10px rgba(0,180,255,0.25); }
+  .btn-outline {
+    background: transparent;
+    color: rgb(235 239 245);
+    border: 1px solid rgba(42,44,53,.4);
+    box-shadow: inset 0 0 12px rgba(0,180,255,.25);
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .text-gradient{
+    background: linear-gradient(90deg,#ff3d8d,#7e3fff,#00b4ff);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
 }

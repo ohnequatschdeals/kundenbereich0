@@ -4,17 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "rgb(var(--surface-1) / <alpha-value>)",
-        surface: "rgb(var(--surface-2) / <alpha-value>)",
-        outline: "rgb(var(--outline) / <alpha-value>)",
-        brand: "rgb(var(--brand-500) / <alpha-value>)",
-        brandMuted: "rgb(var(--brand-400) / <alpha-value>)",
-        text: "rgb(var(--text-1) / <alpha-value>)",
-        textDim: "rgb(var(--text-2) / <alpha-value>)"
+        background: "#0e0f1a",
+        anthrazit: "#1f1f2d",
+        purpleDark: "#1a0e23",
+        outline: "rgb(42 44 53)",
+        textColor: "rgb(235 239 245)",
+        textDim: "rgb(160 168 180)",
+        brand: "#00b4ff",
       },
-      boxShadow: { glow: "0 0 24px rgba(var(--brand-500), var(--glow-opacity))" },
-      borderRadius: { xl2: "1rem", xl3: "1.25rem" }
-    }
+      borderRadius: { xl2: "1rem" },
+    },
   },
-  plugins: []
+  plugins: [],
 };
