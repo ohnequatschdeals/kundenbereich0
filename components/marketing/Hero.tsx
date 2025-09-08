@@ -1,24 +1,18 @@
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[80vh] text-center
-                        bg-gradient-to-br from-purpleDark via-background to-anthrazit px-4">
-      <div className="container-page">
+    <section className="hero-surface relative py-24 md:py-32">
+      <div className="container mx-auto px-6 text-center">
         <h1 className="text-gradient text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
-          Digital. Persönlich.<br/>Ohne Quatsch.
+          Digital. Persönlich.<br/> Ohne Quatsch.
         </h1>
-
-        <p className="mt-6 text-lg md:text-xl muted max-w-3xl mx-auto">
+        <p className="mt-6 max-w-2xl mx-auto text-lg text-[#A7AFC2]">
           Ehrliche Beratung für Internet, Mobilfunk, Strom, Gas & Kredite – ohne versteckte Kosten.
         </p>
-
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="/angebote" className="btn-pill btn-gradient hover:scale-[1.03]">
+          <a href="#angebote" className="rounded-full px-6 py-3 font-semibold shadow-soft-glow bg-gradient-to-r from-aqua to-pink text-[#0a0c11] hover:shadow-ring-aqua transition">
             Angebote entdecken
           </a>
-          <a
-            href="/berater"
-            className="btn-pill btn-outline hover:shadow-[0_0_22px_rgba(0,180,255,0.55)] hover:text-white/90"
-          >
+          <a href="/berater" className="rounded-full px-6 py-3 font-semibold border border-white/10 text-text hover:border-white/20 hover:bg-white/5 transition">
             Berater finden
           </a>
         </div>

@@ -1,16 +1,19 @@
 import "./globals.css";
-import "../styles/design-tokens.css";
-import type { Metadata } from "next";
+import Header from "@/components/layout/Header";
+import type { ReactNode } from "react";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "OhneQuatschDeals",
-  description: "Ehrliche Beratung – Internet, Mobilfunk, Strom, Gas & Kredite.",
+  description: "Ehrliche Beratung – Ohne Quatsch."
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body className="bg-base text-text">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
