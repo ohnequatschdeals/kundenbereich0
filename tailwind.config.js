@@ -1,21 +1,20 @@
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        oqd: {
-          dark: "#0E0F1A",
-          purple: "#7E3FFF",
-          pink: "#FF3F87",
-          cyan: "#00FFC8",
-          gradient1: "rgb(233,73,190)",
-          gradient2: "rgb(0,255,200)",
-        },
+        background: "rgb(var(--surface-1) / <alpha-value>)",
+        surface: "rgb(var(--surface-2) / <alpha-value>)",
+        outline: "rgb(var(--outline) / <alpha-value>)",
+        brand: "rgb(var(--brand-500) / <alpha-value>)",
+        brandMuted: "rgb(var(--brand-400) / <alpha-value>)",
+        text: "rgb(var(--text-1) / <alpha-value>)",
+        textDim: "rgb(var(--text-2) / <alpha-value>)"
       },
-      backgroundImage: {
-        "oqd-gradient": "linear-gradient(90deg, #FF3F87 0%, #7E3FFF 50%, #00FFC8 100%)",
-      },
-    },
+      boxShadow: { glow: "0 0 24px rgba(var(--brand-500), var(--glow-opacity))" },
+      borderRadius: { xl2: "1rem", xl3: "1.25rem" }
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};
